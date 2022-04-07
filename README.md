@@ -19,8 +19,8 @@ Schematic diagram of the device:
 Основан на микроконтроллере Atmega 32u2
 (Arduino Leonardo/Arduino micro)
 В коде используются следующие библиотеки:
--[Arduino SwitchJoystick Library](https://github.com/HackerLoop/Arduino-JoyCon-Library-for-Nintendo-Switch)
--[Keyboard Library for Arduino](https://github.com/arduino-libraries/Keyboard)
+*[Arduino SwitchJoystick Library](https://github.com/HackerLoop/Arduino-JoyCon-Library-for-Nintendo-Switch)
+*[Keyboard Library for Arduino](https://github.com/arduino-libraries/Keyboard)
 
 Принципиальная схема устройства:
 ![image](https://user-images.githubusercontent.com/41334756/162223189-de970c12-02b6-4496-a010-9811bf72aa28.png)
