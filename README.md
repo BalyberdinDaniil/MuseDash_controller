@@ -7,8 +7,11 @@ The following libraries are used in the code:
 -[Arduino SwitchJoystick Library](https://github.com/HackerLoop/Arduino-JoyCon-Library-for-Nintendo-Switch)
 -[Keyboard Library for Arduino](https://github.com/arduino-libraries/Keyboard)
 
+I used a hardware interrupt so that the ports are only read when one of the buttons is actually pressed
+
 Schematic diagram of the device:
-![image](https://user-images.githubusercontent.com/41334756/162223189-de970c12-02b6-4496-a010-9811bf72aa28.png)
+![image](https://user-images.githubusercontent.com/41334756/162224062-594a57fb-f69d-40e3-ab41-c264ae0356a1.png)
+
 
 # Контроллер для MuseDash
 Контроллер для ритм-игры MuseDash. Для PC and Nswitch
