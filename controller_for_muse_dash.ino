@@ -58,7 +58,7 @@ void loop() {
     byte countButton = 0;
     while (1 > 0) {
       for (byte counter = 0; counter < 8; counter++) { //Счётчик CD4017 бегает по кнопкам
-        for (byte i = 0; i < 5; i++) {//Проверяем было ли прерывание на всех таких входах
+        for (byte i = 0; i < 5; i++) {  //Проверяем было ли прерывание на всех таких входах
           if (pressButton[i]) {
             if (!digitalRead(i + 8)) {
               pressButton[i] = 0;
