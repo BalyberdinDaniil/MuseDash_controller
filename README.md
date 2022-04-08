@@ -9,8 +9,7 @@ The following libraries are used in the code:
 
 I used a hardware interrupt so that the ports are only read when one of the buttons is actually pressed
 
-Schematic diagram of the device:
-![image](https://user-images.githubusercontent.com/41334756/162224062-594a57fb-f69d-40e3-ab41-c264ae0356a1.png)
+Schematic diagram of the device in Fritzing file (https://fritzing.org/)
 
 
 # Контроллер для MuseDash
@@ -23,6 +22,5 @@ Schematic diagram of the device:
 [Arduino SwitchJoystick Library](https://github.com/HackerLoop/Arduino-JoyCon-Library-for-Nintendo-Switch)
 [Keyboard Library for Arduino](https://github.com/arduino-libraries/Keyboard)
 
-Принципиальная схема устройства:
-![image](https://user-images.githubusercontent.com/41334756/162223189-de970c12-02b6-4496-a010-9811bf72aa28.png)
+Принципиальная схема устройства в файле Fritzing (https://fritzing.org/)
 
