@@ -61,7 +61,11 @@ void R2() {
 void loop() {
   if (analogRead(A0) < 512) {
     while (1 > 0) {
+      /*Костыль. Есть подозрение что ломается из-за millis()/long переменной
+      На digitalRead ломается и не уходит в else таким вот образом МК заставляется обработка else
+      */
       playButtons(); //WTF? Но так работает корректно
+      
       if (millis() - timing > 100) {
         navigation();
       }
