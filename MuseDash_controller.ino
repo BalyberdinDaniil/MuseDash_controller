@@ -12,11 +12,8 @@ unsigned long timing;
 // Create Joystick
 Joystick_ Joystick;
 
-bool device = 0; //Клавиатура по умолчанию
 
 volatile bool pressButton [5] = {0, 0, 0, 0, 0};
-
-
 
 
 void setup() {
@@ -24,15 +21,14 @@ void setup() {
   Keyboard.begin();
   for (byte i = 0; i < 4; i++) {
     pinMode(i, INPUT_PULLUP);
-    pinMode(i + 8, INPUT_PULLUP);
   }
-  pinMode(13, INPUT);
-  pinMode(7, INPUT);
+  pinMode(13, OUTPUT);
+
   pinMode(step, OUTPUT);
   pinMode(reset, OUTPUT);
   pinMode(read, INPUT);
 
-  device = analogRead(A0);
+
 
   //Чтение по прерыванию - была ли нажата кнопка.
   //Чтение цифровых входов - зажата ли в данный момент
@@ -46,24 +42,32 @@ void setup() {
 
 void L1() {
   pressButton [0] = 1;
+  timing = millis();
 }
 void L2() {
   pressButton [1] = 1;
+  timing = millis();
 }
 void R1() {
   pressButton [2] = 1;
+  timing = millis();
 }
 void R2() {
   pressButton [3] = 1;
+  timing = millis();
 }
 
 
 void loop() {
-  if (device < 512) {
+  if (analogRead(A0) < 512) {
     while (1 > 0) {
-      //
-      playButtons();
-      //navigation();
+      playButtons(); //WTF? Но так работает корректно
+      if (millis() - timing > 100) {
+        navigation();
+      }
+      else
+
+        playButtons();
     }
   }
 }
